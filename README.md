@@ -1,2 +1,0 @@
-# jayyoonakajaeha.github.io
-profile
