@@ -513,6 +513,27 @@
                 margin-bottom: 1rem;
             }
         }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -616,6 +637,14 @@
                                 </svg>
                             </a> -->
                         </div>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="assets/Jaeha_Yoon_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                            </svg>
+                            View CV
+                        </a>
                     </div>
                     <div class="hero-image">
                         <!-- Education highlights -->
