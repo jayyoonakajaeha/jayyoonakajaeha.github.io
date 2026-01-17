@@ -117,8 +117,8 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
             align-items: center;
         }
 
@@ -270,6 +270,28 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
+        }
+
+        /* Publications Section */
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .publication-item {
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .publication-text {
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .publication-text strong {
+            color: var(--text-dark);
+            font-weight: 700;
         }
 
         /* Projects Section */
@@ -458,10 +480,16 @@
 
             .hero-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .hero-text h1 {
                 font-size: 2rem;
+            }
+            
+            .hero-image-container {
+                order: -1;
+                margin-bottom: 1rem;
             }
 
             .projects-grid {
@@ -487,31 +515,13 @@
         
         .profile-picture {
             width: 100%;
-            max-width: 250px; /* Adjust size as needed */
+            max-width: 250px;
             height: auto;
-            border-radius: 50%; /* Makes the image circular */
+            border-radius: 50%;
             object-fit: cover;
             aspect-ratio: 1 / 1;
             border: 4px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Adjust the hero grid to accommodate the photo */
-        .hero-content {
-            grid-template-columns: 1fr 2fr; /* Ratio for pic vs text */
-            gap: 4rem; /* Increased gap for better spacing */
-        }
-        
-        /* Ensure the layout stacks on mobile */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .hero-image-container {
-                order: -1; /* Puts the picture on top on mobile */
-                margin-bottom: 1rem;
-            }
         }
 
         .btn-primary {
@@ -545,13 +555,13 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <a href="#home" class="nav-brand">Jaeha Yoon</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#awards">Awards</a></li>
@@ -564,7 +574,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -610,46 +619,14 @@
                                 <a href="https://www.linkedin.com/in/jaeha-yoon-7a8bb2381/" target="_blank" aria-label="LinkedIn">
                                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                 </a>
-                                <!-- SoundCloud -->
                                 <a href="https://on.soundcloud.com/CNyMeAT97N59Tqjp6X" target="_blank" aria-label="SoundCloud">
-                                    <img src="assets/SoundCloud_logo.png" alt="SoundCloud" width=="28" height="28" style="vertical-align: middle;">
+                                    <img src="assets/SoundCloud_logo.png" alt="SoundCloud" width="28" height="28" style="vertical-align: middle;">
                                 </a>
                             </div>
-                            
-                            <!-- 🔴 추가 링크 예시들 (필요한 것만 주석 해제해서 사용) -->
-                            
-                            <!-- Google Scholar -->
-                            <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" aria-label="Google Scholar">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                                </svg>
-                            </a> -->
-                            
-                            <!-- Email (mailto 링크) -->
-                            <!-- <a href="mailto:613jay@sju.ac.kr" aria-label="Email">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </a> -->
-                            
-                            <!-- Instagram -->
-                            <!-- <a href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 0 2.881 1.44 1.44 0 0 1 0-2.881z"/>
-                                </svg>
-                            </a> -->
-                            
-                            <!-- Twitter/X -->
-                            <!-- <a href="https://twitter.com/YOUR_HANDLE" target="_blank" aria-label="Twitter">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                </svg>
-                            </a> -->
                         </div>
                     </div>
                     
                     <div class="hero-image">
-                        <!-- Education highlights -->
                         <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--card-shadow);">
                             <h3 style="margin-bottom: 1rem; color: var(--text-dark);">Education</h3>
                             <div style="margin-bottom: 1rem;">
@@ -659,7 +636,7 @@
                             </div>
                             <div style="display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--border-color);">
                                 <div>
-                                    <div style="font-size: 1.5rem; font-weight: 600; color: var(--primary-color);">4.35</div>
+                                    <div style="font-size: 1.5rem; font-weight: 600; color: var(--primary-color);">4.36</div>
                                     <div style="color: var(--text-light); font-size: 0.9rem;">GPA / 4.5</div>
                                 </div>
                             </div>
@@ -670,7 +647,6 @@
         </div>
     </section>
 
-    <!-- Research Experience Section -->
     <section id="research">
         <div class="container">
             <h2 class="section-title">Research Experience</h2>
@@ -679,7 +655,7 @@
                     <div class="research-header">
                         <div>
                             <h3 class="research-title">Pattern Recognition & Machine Learning Lab</h3>
-                            <p class="research-meta">Sejong University | Advisor: Prof. Changjae Chun | Jan 2024 - Present</p>
+                            <p class="research-meta">Sejong University | Advisor: Prof. Chang-Jae Chun | Jan 2024 - Present</p>
                         </div>
                         <span class="badge">Ongoing</span>
                     </div>
@@ -724,26 +700,151 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="research-item">
-                    <div class="research-header">
-                        <div>
-                            <h3 class="research-title">Cognitive Ability Prediction via Smartwatch Biosignals</h3>
-                            <p class="research-meta">Biomedical AI Course, Sejong University | Advisor: Prof. Gilyong Lee | Mar - May 2025</p>
-                        </div>
+    <section id="publications" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <p class="publication-text">
+                        <strong>Jaeha Yoon</strong>, Nayeon Kim, Donghyuk Kim, and Chang-Jae Chun*, "A Multi-level Stacking Ensemble for Protein Structure Quality Prediction," <em>The Korean Institute of Communications and Information Sciences (KICS) Winter Conference</em>, 2026.
+                    </p>
+                </div>
+                <div class="publication-item">
+                    <p class="publication-text">
+                        Shinhye Hwang, <strong>Jaeha Yoon</strong>, and Chang-Jae Chun*, "Ensemble-Based Quality Assessment Model for Protein Docking Candidate Structures," <em>The Korean Institute of Communications and Information Sciences (KICS) Winter Conference</em>, 2026.
+                    </p>
+                </div>
+                <div class="publication-item">
+                    <p class="publication-text">
+                        Donghyuk Kim, <strong>Jaeha Yoon</strong>, and Chang-Jae Chun*, "Efficiency Analysis of LHS-Based Sampling Across Different Data Usage Ratios," <em>The Korean Institute of Communications and Information Sciences (KICS) Winter Conference</em>, 2026.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">MUSEED: AI-Powered Playlist Generation</h3>
+                        <p class="project-meta">Deep Learning Course Project | Sep - Dec 2025</p>
                     </div>
-                    <div class="research-description">
-                        <ul>
-                            <li>Led end-to-end development of an AI system predicting cognitive function from smartwatch data, including data collection, preprocessing, feature engineering, and deep learning model design and execution</li>
-                        </ul>
+                    <p class="project-description">
+                        Developed a lightweight playlist generation platform using Self-Supervised Learning (SimCLR) to fine-tune the MuQ backbone, achieving 57% parameter reduction while outperforming teacher models. Engineered an event-driven asynchronous architecture with FastAPI, Redis, and Celery, and implemented FAISS vector search to reduce retrieval latency to under 0.1 seconds. Designed a full-stack web service utilizing Next.js for user-uploaded audio analysis and social discovery features.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">SimCLR</span>
+                        <span class="tag">Music AI</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">FAISS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AI Dormitory Matching & Management</h3>
+                        <p class="project-meta">13th Sejong SW-AI Hackathon (Silver Prize) | Dec 2025</p>
+                    </div>
+                    <p class="project-description">
+                        Implemented a roommate matching system using text embedding similarity to analyze user preferences and lifestyle patterns. Developed an automated facility repair request feature utilizing computer vision to classify failure types and severity, outputting structured JSON data. Engineered a duplicate report detection algorithm by analyzing image similarity and report content.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Embeddings</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Jongno-gu Office Notification Chatbot</h3>
+                        <p class="project-meta">KT Community Problem-Solving Project | Jul - Aug 2025</p>
+                    </div>
+                    <p class="project-description">
+                        Developed the official notification chatbot for Jongno-gu Office to send alerts on public assemblies. Built a pipeline to automatically extract traffic control information by crawling bus route data and leveraging LLM for parsing. Created notification service API for traffic disruption alerts.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">LLM</span>
+                        <span class="tag">Web Crawling</span>
+                        <span class="tag">API Development</span>
+                        <span class="tag">Chatbot</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Smartwatch-based Cognitive Function Prediction System</h3>
+                        <p class="project-meta">Biomedical AI Course Project | Mar - May 2025</p>
+                    </div>
+                    <p class="project-description">
+                        Led end-to-end development of an AI system predicting cognitive function from smartwatch data, including data collection, preprocessing, feature engineering, and deep learning model design and execution.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Biosignals</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Healthcare AI</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AI Malpyeong Competition</h3>
+                        <p class="project-meta">National Institute of Korean Language | Jul - Aug 2024</p>
+                    </div>
+                    <p class="project-description">
+                        Participated in the Everyday Conversation Summarization Competition. Fine-tuned Large Language Models using QLoRA and few-shot prompt tuning techniques to effectively summarize daily conversations in Korean.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">LLM Fine-tuning</span>
+                        <span class="tag">QLoRA</span>
+                        <span class="tag">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">ESCAPER - Jiu-Jitsu Club President</h3>
+                        <p class="project-meta">Sejong University | Sep 2024 - Present</p>
+                    </div>
+                    <p class="project-description">
+                        Leading the Sejong University Central Jiu-Jitsu Club as President. Organized joint training sessions with Konkuk University and established strategic partnership with Flame Stone Jiu-Jitsu gym. Focused on building a strong community and promoting martial arts culture on campus.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Community Building</span>
+                        <span class="tag">Sports Management</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Military AI Education Program</h3>
+                        <p class="project-meta">Republic of Korea Army | Mar 2022 - Sep 2023</p>
+                    </div>
+                    <p class="project-description">
+                        Served as Transport Battalion Driver (Sergeant) while completing an AI Education Program hosted by Elice Inc. Developed projects on sensor-based fault classification and time-series analysis of historical WWII data.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Time Series Analysis</span>
+                        <span class="tag">Classification</span>
+                        <span class="tag">Sensor Data</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" style="background-color: var(--bg-light);">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
@@ -796,15 +897,19 @@
         </div>
     </section>
 
-    <!-- Awards Section -->
-    <section id="awards" style="background-color: var(--bg-light);">
+    <section id="awards">
         <div class="container">
             <h2 class="section-title">Honors & Awards</h2>
             <div class="awards-timeline">
                 <div class="award-item">
                     <div class="award-date">Mar 2025 - Present</div>
                     <div class="award-title">KT Digital Talent Scholarship</div>
-                    <div class="award-org">Selected for competitive scholarship supporting outstanding students in ICT and AI fields</div>
+                    <div class="award-org">Selected as a recipient for a competitive scholarship program supporting outstanding students in ICT and AI fields</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-date">Dec 2025</div>
+                    <div class="award-title">Silver Prize, 13th Sejong University SW-AI Hackathon</div>
+                    <div class="award-org">Sejong University</div>
                 </div>
                 <div class="award-item">
                     <div class="award-date">Aug 2025</div>
@@ -851,7 +956,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Jaeha Yoon. All rights reserved. | Built with passion for AI research</p>
@@ -949,70 +1053,3 @@
     </script>
 </body>
 </html>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Jongno-gu Office Notification Chatbot</h3>
-                        <p class="project-meta">KT Community Problem-Solving Project | Jul - Aug 2025</p>
-                    </div>
-                    <p class="project-description">
-                        Developed an official notification chatbot for Jongno-gu Office to send real-time alerts on public assemblies. Built a pipeline to automatically extract traffic control information by crawling bus route data and leveraging LLM for parsing. Created notification service API for traffic disruption alerts.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">LLM</span>
-                        <span class="tag">Web Crawling</span>
-                        <span class="tag">API Development</span>
-                        <span class="tag">Chatbot</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">ESCAPER - Jiu-Jitsu Club President</h3>
-                        <p class="project-meta">Sejong University | Sep 2024 - Present</p>
-                    </div>
-                    <p class="project-description">
-                        Leading the Sejong University Central Jiu-Jitsu Club as President. Organized joint training sessions with Konkuk University and established strategic partnership with Flame Stone Jiu-Jitsu gym. Focused on building a strong community and promoting martial arts culture on campus.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Leadership</span>
-                        <span class="tag">Community Building</span>
-                        <span class="tag">Sports Management</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">AI Malpyeong Competition</h3>
-                        <p class="project-meta">National Institute of Korean Language | Jul - Aug 2024</p>
-                    </div>
-                    <p class="project-description">
-                        Participated in the Everyday Conversation Summarization Competition. Fine-tuned Large Language Models using QLoRA and few-shot prompt tuning techniques to effectively summarize daily conversations in Korean.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">LLM Fine-tuning</span>
-                        <span class="tag">QLoRA</span>
-                        <span class="tag">Prompt Engineering</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Military AI Education Program</h3>
-                        <p class="project-meta">Republic of Korea Army | Mar 2022 - Sep 2023</p>
-                    </div>
-                    <p class="project-description">
-                        Served as Transport Battalion Driver (Sergeant) while completing an AI Education Program hosted by Elice Inc. Developed projects on sensor-based fault classification and time-series analysis of historical WWII data.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Time Series Analysis</span>
-                        <span class="tag">Classification</span>
-                        <span class="tag">Sensor Data</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Career Lecture for High School Students</h3>
-                        <p class="project-meta">Bundang Jungang High School | Jun 2021</p>
-                    </div>
