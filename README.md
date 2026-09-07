@@ -245,5 +245,5 @@ For questions or issues:
 
 ---
 
-**Last Updated**: September 2025
-**Version**: 1.0.0
+**Last Updated**: September 2026
+**Version**: 2.0.0
